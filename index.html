@@ -36,13 +36,9 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .img-wrap{position:relative;overflow:hidden;background:linear-gradient(140deg,var(--c1,#EFE7DA),var(--c2,#D9CDB8));}
 .img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .5s var(--ease);}
 .img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(140deg,transparent 40%,rgba(0,0,0,.08));pointer-events:none;z-index:0;}
-
-/* Announcement */
 .announce{background:var(--dark);color:#E2E8F0;font-size:12.5px;letter-spacing:.04em;text-align:center;padding:10px 16px;display:flex;justify-content:center;gap:26px;flex-wrap:wrap;}
 .announce span{display:inline-flex;align-items:center;gap:7px;}
 .announce span::before{content:"✦";color:var(--accent);font-size:10px;}
-
-/* Header */
 .header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .header-inner{height:var(--header-h);display:flex;align-items:center;gap:24px;}
 .brand{display:flex;align-items:center;gap:12px;white-space:nowrap;color:var(--ink);}
@@ -69,8 +65,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 @keyframes pop{0%{transform:scale(1);}45%{transform:scale(1.45);}100%{transform:scale(1);}}
 @media (max-width:960px){.nav{display:none;}}
 @media (max-width:480px){.brand-logo{width:40px;height:40px;}.brand-name{font-size:16px;}.brand-tagline{letter-spacing:.24em;}}
-
-/* Search bar */
 .search-bar{position:absolute;top:100%;left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);padding:18px 0;transform:translateY(-100%);opacity:0;pointer-events:none;transition:all .35s var(--ease);z-index:59;box-shadow:0 12px 30px rgba(15,23,42,.08);}
 .search-bar.show{transform:translateY(0);opacity:1;pointer-events:auto;}
 .search-inner{display:flex;gap:12px;align-items:center;}
@@ -90,8 +84,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .search-result .sr-meta{font-size:12px;color:var(--muted);}
 .search-result .sr-price{font-size:14px;font-weight:700;color:var(--accent);}
 .search-empty{text-align:center;padding:30px;color:var(--muted);font-size:13.5px;}
-
-/* Trust strip */
 .trust-strip{background:#fff;border-bottom:1px solid var(--line);padding:18px 0;}
 .trust-strip-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 @media (max-width:900px){.trust-strip-inner{grid-template-columns:repeat(2,1fr);gap:16px;}}
@@ -100,8 +92,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .trust-badge .ico svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .trust-badge .txt strong{display:block;font-size:13px;font-weight:700;color:var(--ink);line-height:1.2;}
 .trust-badge .txt span{font-size:11.5px;color:var(--muted);}
-
-/* Hero */
 .hero{position:relative;background:linear-gradient(120deg,#0A0E1A 0%,#111827 45%,#1E293B 100%);color:#fff;min-height:560px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line);}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 75% 40%,rgba(37,99,235,.35),transparent 65%),radial-gradient(45% 45% at 15% 20%,rgba(37,99,235,.18),transparent 60%);pointer-events:none;}
 .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;opacity:.5;pointer-events:none;}
@@ -124,64 +114,25 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .hero-stat strong{display:block;font-size:22px;font-weight:800;color:#fff;line-height:1;}
 .hero-stat span{font-size:11.5px;color:#64748B;text-transform:uppercase;letter-spacing:.1em;}
 @media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:30px;padding-top:40px;padding-bottom:40px;}.hero-visual{height:340px;}.hero-card{transform:none;}}
-
-/* Buttons base */
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:10px;font-size:14px;font-weight:700;letter-spacing:.02em;transition:all .22s var(--ease);border:1.5px solid transparent;white-space:nowrap;cursor:pointer;}
 .btn:active{transform:scale(.985);}
-
-/* ── NAVY SILK BUTTONS ── */
-.btn-primary,
-.btn-accent{
-  background:linear-gradient(135deg,#1E3A8A 0%,#0F1E4A 50%,#1E3A8A 100%);
-  background-size:220% 220%;
-  background-position:0% 50%;
-  color:#fff;
-  position:relative;
-  overflow:hidden;
-  isolation:isolate;
+.btn-primary,.btn-accent{
+  background:linear-gradient(135deg,#1E3A8A 0%,#0F1E4A 50%,#1E3A8A 100%);background-size:220% 220%;background-position:0% 50%;color:#fff;position:relative;overflow:hidden;isolation:isolate;
   box-shadow:0 6px 20px rgba(30,58,138,.32),inset 0 1px 0 rgba(255,255,255,.10);
-  transition:background-position 1.1s cubic-bezier(.4,0,.2,1),
-             transform .28s cubic-bezier(.22,.61,.36,1),
-             box-shadow .45s ease;
+  transition:background-position 1.1s cubic-bezier(.4,0,.2,1),transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease;
   will-change:background-position;
 }
-.btn-primary:hover,
-.btn-accent:hover{
-  background-position:100% 50%;
-  transform:translateY(-2px);
-  box-shadow:0 14px 36px rgba(30,58,138,.50),inset 0 1px 0 rgba(255,255,255,.18);
-}
-.btn-primary:active,
-.btn-accent:active{
-  transform:translateY(0) scale(.985);
-  box-shadow:0 6px 18px rgba(30,58,138,.40),inset 0 1px 0 rgba(255,255,255,.10);
-}
-.btn-primary::before,
-.btn-accent::before{
-  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
-  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.00) 25%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.00) 75%,transparent 100%);
-  transform:skewX(-20deg);
-  transition:left .95s cubic-bezier(.4,0,.2,1);
-  pointer-events:none;z-index:1;
-}
-.btn-primary:hover::before,
-.btn-accent:hover::before{left:130%;}
-.btn-primary::after,
-.btn-accent::after{
-  content:"";position:absolute;inset:0;border-radius:inherit;
-  background:radial-gradient(120% 80% at 50% -20%,rgba(255,255,255,.18),transparent 55%);
-  pointer-events:none;z-index:0;
-}
-.btn-primary > *,
-.btn-accent > *{position:relative;z-index:2;}
-
+.btn-primary:hover,.btn-accent:hover{background-position:100% 50%;transform:translateY(-2px);box-shadow:0 14px 36px rgba(30,58,138,.50),inset 0 1px 0 rgba(255,255,255,.18);}
+.btn-primary:active,.btn-accent:active{transform:translateY(0) scale(.985);box-shadow:0 6px 18px rgba(30,58,138,.40),inset 0 1px 0 rgba(255,255,255,.10);}
+.btn-primary::before,.btn-accent::before{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.00) 25%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.00) 75%,transparent 100%);transform:skewX(-20deg);transition:left .95s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:1;}
+.btn-primary:hover::before,.btn-accent:hover::before{left:130%;}
+.btn-primary::after,.btn-accent::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(120% 80% at 50% -20%,rgba(255,255,255,.18),transparent 55%);pointer-events:none;z-index:0;}
+.btn-primary > *,.btn-accent > *{position:relative;z-index:2;}
 .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.35);}
 .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;}
 .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light);}
 .btn-stack{display:grid;gap:12px;margin-bottom:20px;}
-
-/* Sections */
 .section{padding:72px 0;}
 .section-head{text-align:center;margin-bottom:44px;}
 .section-head.left{text-align:left;}
@@ -189,8 +140,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .section-head h2{font-family:'Inter',sans-serif;font-size:clamp(26px,3.2vw,36px);font-weight:800;letter-spacing:-.02em;margin-bottom:12px;}
 .section-head p{color:var(--muted);font-size:15px;max-width:560px;margin:0 auto;}
 .section-head.left p{margin:0;}
-
-/* Category grid */
 .category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
 @media (max-width:900px){.category-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:480px){.category-grid{grid-template-columns:1fr;}}
@@ -204,8 +153,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .cat-card .cat-arrow{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;z-index:3;opacity:0;transform:translateY(-6px);transition:all .3s var(--ease);}
 .cat-card:hover .cat-arrow{opacity:1;transform:translateY(0);}
 .cat-card .cat-arrow svg{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
-
-/* Product grid */
 .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 @media (max-width:1024px){.product-grid{grid-template-columns:repeat(3,1fr);}}
 @media (max-width:768px){.product-grid{grid-template-columns:repeat(2,1fr);gap:16px;}}
@@ -229,41 +176,20 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .pc-price{font-size:17px;font-weight:800;color:var(--ink);}
 .pc-compare{font-size:13px;color:var(--muted);text-decoration:line-through;}
 .pc-save{font-size:10.5px;font-weight:700;background:#FEE2E2;color:var(--red);padding:3px 8px;border-radius:5px;}
-
-/* ── NAVY SILK product-card Add-to-Cart ── */
 .pc-btn{
   width:100%;padding:12px;border-radius:9px;
-  background:linear-gradient(135deg,#1E3A8A 0%,#0F1E4A 50%,#1E3A8A 100%);
-  background-size:220% 220%;
-  background-position:0% 50%;
-  color:#fff;font-size:12.5px;font-weight:700;
-  display:flex;align-items:center;justify-content:center;gap:7px;
-  position:relative;overflow:hidden;isolation:isolate;
+  background:linear-gradient(135deg,#1E3A8A 0%,#0F1E4A 50%,#1E3A8A 100%);background-size:220% 220%;background-position:0% 50%;color:#fff;font-size:12.5px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:7px;position:relative;overflow:hidden;isolation:isolate;
   box-shadow:0 4px 14px rgba(30,58,138,.28),inset 0 1px 0 rgba(255,255,255,.10);
-  transition:background-position 1.1s cubic-bezier(.4,0,.2,1),
-             transform .28s cubic-bezier(.22,.61,.36,1),
-             box-shadow .45s ease;
+  transition:background-position 1.1s cubic-bezier(.4,0,.2,1),transform .28s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease;
   will-change:background-position;
 }
-.pc-btn:hover{
-  background-position:100% 50%;
-  transform:translateY(-1px);
-  box-shadow:0 10px 26px rgba(30,58,138,.45),inset 0 1px 0 rgba(255,255,255,.16);
-}
-.pc-btn::before{
-  content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
-  background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.00) 25%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.00) 75%,transparent 100%);
-  transform:skewX(-20deg);
-  transition:left .95s cubic-bezier(.4,0,.2,1);
-  pointer-events:none;z-index:1;
-}
+.pc-btn:hover{background-position:100% 50%;transform:translateY(-1px);box-shadow:0 10px 26px rgba(30,58,138,.45),inset 0 1px 0 rgba(255,255,255,.16);}
+.pc-btn::before{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.00) 25%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.00) 75%,transparent 100%);transform:skewX(-20deg);transition:left .95s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:1;}
 .pc-btn:hover::before{left:130%;}
 .pc-btn svg{position:relative;z-index:2;width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;}
-
 .stars{position:relative;display:inline-block;font-size:13px;letter-spacing:2.5px;color:#CBD5E1;line-height:1;white-space:nowrap;}
 .stars .fill{position:absolute;left:0;top:0;overflow:hidden;color:var(--gold);width:calc(var(--r,5) / 5 * 100%);white-space:nowrap;}
-
-/* Promo */
 .promo{background:linear-gradient(120deg,#0A0E1A 0%,#111827 50%,#1E293B 100%);border-radius:20px;padding:48px 44px;color:#fff;position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;}
 .promo::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 70% at 80% 30%,rgba(37,99,235,.35),transparent 60%);pointer-events:none;}
 .promo > *{position:relative;z-index:2;}
@@ -273,13 +199,9 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .promo .btn{width:auto;padding:14px 30px;}
 .promo-visual{height:230px;border-radius:16px;overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5);}
 @media (max-width:760px){.promo{grid-template-columns:1fr;padding:36px 28px;}.promo-visual{height:200px;}}
-
-/* Breadcrumbs */
 .crumbs{font-size:12.5px;color:var(--muted);padding:18px 0 6px;display:flex;gap:8px;flex-wrap:wrap;}
 .crumbs a:hover{color:var(--accent);}
 .crumbs span.sep{opacity:.5;}
-
-/* Product detail */
 .product{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;padding:18px 0 72px;align-items:start;}
 @media (max-width:960px){.product{grid-template-columns:1fr;gap:32px;padding-bottom:48px;}}
 .gallery{display:grid;grid-template-columns:82px minmax(0,1fr);gap:16px;}
@@ -293,7 +215,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:
 .slide.active{opacity:1;}
 .stage-badge{position:absolute;top:16px;left:16px;z-index:3;background:var(--red);color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;padding:7px 13px;border-radius:6px;text-transform:uppercase;}
 @media (max-width:960px){.gallery{grid-template-columns:1fr;}.thumbs{order:2;flex-direction:row;overflow-x:auto;padding-bottom:4px;gap:10px;}.thumb{flex:0 0 66px;width:66px;height:66px;}.stage{order:1;}}
-
 .info{position:sticky;top:88px;}
 @media (max-width:960px){.info{position:static;}}
 .rating-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;margin-bottom:12px;}
@@ -330,11 +251,9 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .stock{font-size:12.5px;color:var(--green);font-weight:600;display:flex;align-items:center;gap:7px;}
 .stock::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.5;}}
-
 .btn.btn-primary,.btn.btn-accent{color:#fff;}
 .btn.btn-outline{color:var(--ink);border-color:var(--line);background:var(--surface);}
 .btn.btn-outline:hover{background:var(--accent-light);border-color:var(--accent);color:var(--accent-dark);}
-
 .delivery{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--surface);margin-bottom:20px;}
 .delivery label{font-size:12.5px;font-weight:700;display:block;margin-bottom:9px;color:var(--ink);}
 .pin-row{display:flex;gap:9px;}
@@ -345,11 +264,9 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .delivery-result{margin-top:12px;font-size:13px;display:none;align-items:center;gap:9px;color:var(--green);font-weight:600;}
 .delivery-result.show{display:flex;}
 .delivery-result svg{width:16px;height:16px;stroke:var(--green);fill:none;stroke-width:2.4;}
-
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px;}
 .trust-item{text-align:center;padding:16px 8px;border-radius:10px;background:#F8FAFC;border:1px solid var(--line);font-size:11.5px;font-weight:600;line-height:1.4;color:#475569;}
 .trust-item svg{width:22px;height:22px;margin:0 auto 8px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-
 .accordion{border-top:1px solid var(--line);}
 .acc-item{border-bottom:1px solid var(--line);}
 .acc-head{width:100%;display:flex;align-items:center;justify-content:space-between;padding:19px 0;font-size:14px;font-weight:600;text-align:left;transition:color .2s;color:var(--ink);}
@@ -364,8 +281,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .acc-body-inner{padding:0 0 22px;font-size:14px;color:#475569;line-height:1.75;}
 .acc-body-inner ul{margin:0;padding-left:18px;}
 .acc-body-inner li{margin-bottom:7px;}
-
-/* Sticky ATC */
 .sticky-atc{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:12px 0;transform:translateY(110%);transition:transform .42s var(--ease);box-shadow:0 -6px 26px rgba(15,23,42,.08);}
 .sticky-atc.show{transform:translateY(0);}
 .sticky-inner{display:flex;align-items:center;gap:18px;}
@@ -375,8 +290,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .sticky-meta .n{font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink);}
 .sticky-meta .p{font-size:12.5px;color:var(--muted);}
 .sticky-atc .btn{width:auto;padding:14px 34px;white-space:nowrap;}
-
-/* Drawer / Modal */
 .overlay{position:fixed;inset:0;z-index:80;background:rgba(10,14,26,.55);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s;}
 .overlay.show{opacity:1;visibility:visible;}
 .drawer{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(440px,100vw);background:var(--surface);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:var(--shadow-lg);}
@@ -417,7 +330,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .drawer-foot .btn{margin-top:16px;width:100%;}
 .secure-note{text-align:center;font-size:11.5px;color:var(--muted);margin-top:12px;display:flex;align-items:center;justify-content:center;gap:6px;}
 .secure-note svg{width:13px;height:13px;stroke:var(--muted);fill:none;stroke-width:1.7;}
-
 .modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s;}
 .modal.show{opacity:1;visibility:visible;}
 .modal-card{width:min(560px,100%);max-height:90vh;overflow-y:auto;background:var(--surface);border-radius:18px;box-shadow:var(--shadow-lg);transform:translateY(20px) scale(.97);transition:transform .4s var(--ease);}
@@ -451,8 +363,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .success h3{font-size:24px;margin-bottom:10px;font-weight:800;font-family:'Inter',sans-serif;color:var(--ink);}
 .success p{color:var(--muted);font-size:14px;margin:0 0 8px;}
 .order-id{display:inline-block;background:var(--accent-light);color:var(--accent-dark);padding:8px 18px;border-radius:8px;font-weight:800;font-size:14px;letter-spacing:.06em;margin:14px 0 24px;}
-
-/* Reviews */
 .reviews{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:72px 0;}
 .review-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:52px;align-items:start;}
 @media (max-width:900px){.review-layout{grid-template-columns:1fr;gap:34px;}}
@@ -487,13 +397,9 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .helpful{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:99px;border:1px solid var(--line);font-size:11.5px;font-weight:600;color:#475569;transition:all .2s;background:#fff;}
 .helpful:hover{border-color:var(--accent);color:var(--accent);}
 .helpful svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8;}
-
-/* Toast */
 .toast{position:fixed;left:50%;bottom:110px;z-index:120;transform:translate(-50%,26px);background:var(--dark);color:#fff;padding:14px 22px;border-radius:11px;font-size:13.5px;font-weight:500;display:flex;align-items:center;gap:11px;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:all .35s var(--ease);max-width:calc(100vw - 40px);}
 .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0);}
 .toast svg{width:17px;height:17px;stroke:#4ADE80;fill:none;stroke-width:2.4;flex:0 0 auto;}
-
-/* Footer */
 .footer{background:var(--dark);color:#94A3B8;padding:64px 0 30px;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px;}
 @media (max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;gap:32px;}}
@@ -507,17 +413,13 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .footer ul a{font-size:13px;color:#94A3B8;transition:color .2s;}
 .footer ul a:hover{color:var(--accent);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:#64748B;}
-
 .view{display:none;}
 .view.active{display:block;}
-
 .catalog-controls{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px;}
 .result-count{font-size:13px;color:var(--muted);}
 .sort-wrap{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);}
 .sort-wrap select{padding:9px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);font-size:13px;font-weight:500;cursor:pointer;color:var(--ink);}
 .sort-wrap select:focus{outline:none;border-color:var(--accent);}
-
-/* Floating WhatsApp */
 .float-wa{position:fixed;bottom:26px;right:26px;z-index:75;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#25D366 0%,#1EBE5D 100%);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.45),0 4px 12px rgba(0,0,0,.15);transition:transform .3s var(--ease),box-shadow .3s;border:0;cursor:pointer;animation:floatIn .6s var(--ease);}
 @keyframes floatIn{0%{transform:scale(0) rotate(-180deg);opacity:0;}60%{transform:scale(1.15) rotate(0);opacity:1;}100%{transform:scale(1) rotate(0);opacity:1;}}
 .float-wa:hover{transform:scale(1.1);box-shadow:0 14px 34px rgba(37,211,102,.6),0 6px 16px rgba(0,0,0,.2);}
@@ -528,16 +430,12 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .float-wa:hover::after{opacity:1;transform:translateY(-50%) translateX(0);}
 .float-wa .wa-badge{position:absolute;top:-2px;right:-2px;min-width:20px;height:20px;padding:0 5px;background:#FF3B30;color:#fff;border-radius:999px;font-size:11px;font-weight:700;display:grid;place-items:center;border:2px solid var(--bg);z-index:3;}
 @media (max-width:640px){.float-wa{width:54px;height:54px;bottom:20px;right:20px;}.float-wa svg{width:28px;height:28px;}.float-wa::after{display:none;}}
-
-/* Admin floating button */
 .admin-float{position:fixed;bottom:26px;left:26px;z-index:78;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(15,23,42,.4);transition:all .3s var(--ease);border:0;cursor:pointer;animation:floatIn .6s var(--ease);}
 .admin-float:hover{transform:scale(1.08) rotate(6deg);box-shadow:0 14px 34px rgba(15,23,42,.5);}
 .admin-float svg{width:24px;height:24px;stroke:#60A5FA;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 .admin-float::after{content:"Admin Access";position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(-6px);background:var(--dark);color:#fff;padding:8px 13px;border-radius:8px;font-size:12px;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 4px 14px rgba(0,0,0,.2);}
 .admin-float:hover::after{opacity:1;transform:translateY(-50%) translateX(0);}
 @media (max-width:640px){.admin-float{width:50px;height:50px;bottom:20px;left:20px;}.admin-float::after{display:none;}}
-
-/* Admin Login Modal */
 .admin-login-modal{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:20px;background:rgba(10,14,26,.75);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .3s var(--ease),visibility .3s;}
 .admin-login-modal.show{opacity:1;visibility:visible;}
 .admin-login-card{width:min(420px,100%);background:var(--surface);border-radius:20px;box-shadow:var(--shadow-lg);padding:40px 34px 32px;position:relative;transform:translateY(20px) scale(.97);transition:transform .4s var(--ease);}
@@ -549,8 +447,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .admin-err{background:#FEE2E2;color:#991B1B;padding:10px 14px;border-radius:9px;font-size:12.5px;margin-bottom:16px;display:none;align-items:center;gap:8px;font-weight:500;}
 .admin-err.show{display:flex;}
 .admin-err svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;flex:0 0 auto;}
-
-/* Admin Panel */
 .admin-panel{position:fixed;inset:0;z-index:145;background:rgba(10,14,26,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;}
 .admin-panel.show{display:flex;}
 .admin-shell{width:min(1080px,100%);height:min(88vh,800px);background:var(--surface);border-radius:20px;box-shadow:var(--shadow-lg);display:grid;grid-template-columns:240px 1fr;overflow:hidden;}
@@ -566,7 +462,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .admin-nav-item.active{background:rgba(37,99,235,.15);color:#fff;border-left-color:#2563EB;}
 @media (max-width:820px){.admin-nav-item.active{border-left:0;border-bottom-color:#2563EB;}}
 .admin-nav-item svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-
 .admin-body{padding:30px 36px 40px;overflow-y:auto;}
 .admin-tab{display:none;}
 .admin-tab.active{display:block;animation:fadeUp .3s var(--ease);}
@@ -582,16 +477,13 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .admin-mini-btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);}
 .admin-mini-btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;}
 .admin-mini-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;}
-
 .admin-grid{display:grid;gap:18px;}
 .admin-grid.two{grid-template-columns:1fr 1fr;}
 @media (max-width:640px){.admin-grid.two{grid-template-columns:1fr;}}
-
 .admin-field label{display:block;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-bottom:7px;}
 .admin-field input,.admin-field textarea,.admin-field select{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:9px;background:#F8FAFC;font-size:13.5px;color:var(--ink);font-family:inherit;}
 .admin-field input:focus,.admin-field textarea:focus,.admin-field select:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(37,99,235,.10);}
 .admin-field textarea{resize:vertical;min-height:72px;line-height:1.5;}
-
 .color-swatches{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;}
 .color-pick{width:38px;height:38px;border-radius:10px;border:2px solid var(--line);cursor:pointer;transition:transform .15s;}
 .color-pick:hover{transform:scale(1.08);}
@@ -599,7 +491,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .color-input{display:flex;gap:8px;align-items:center;margin-top:8px;}
 .color-input input[type="color"]{width:44px;height:38px;padding:3px;border:1.5px solid var(--line);border-radius:8px;cursor:pointer;background:#fff;}
 .color-input input[type="text"]{flex:1;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;font-size:12.5px;font-family:ui-monospace,monospace;}
-
 .admin-product-row{background:#F8FAFC;border:1.5px solid var(--line);border-radius:12px;padding:14px;display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;margin-bottom:12px;}
 @media (max-width:640px){.admin-product-row{grid-template-columns:1fr;}}
 .admin-prod-thumb{width:64px;height:64px;border-radius:10px;background:#E2E8F0;overflow:hidden;position:relative;border:1px solid var(--line);}
@@ -608,30 +499,29 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 .admin-prod-info strong{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .admin-prod-info span{font-size:12px;color:var(--muted);}
 .admin-prod-actions{display:flex;gap:6px;}
-
 .admin-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--green);color:#fff;padding:13px 22px;border-radius:11px;font-size:13.5px;font-weight:600;box-shadow:var(--shadow-lg);z-index:200;display:flex;align-items:center;gap:9px;opacity:0;visibility:hidden;transition:all .35s var(--ease);}
 .admin-toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
 .admin-toast svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.6;}
-
-/* Product edit modal */
 .prod-edit-modal{position:fixed;inset:0;z-index:160;background:rgba(10,14,26,.85);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;}
 .prod-edit-modal.show{display:flex;}
 .prod-edit-card{width:min(620px,100%);background:#fff;border-radius:18px;max-height:90vh;overflow-y:auto;padding:28px 30px 30px;}
 .prod-edit-card h3{font-family:'Inter',sans-serif;font-size:19px;font-weight:800;color:var(--ink);margin-bottom:22px;}
 .prod-edit-card .actions{display:flex;gap:10px;margin-top:24px;justify-content:flex-end;}
 .prod-edit-card .admin-field input[type="url"]{font-size:11.5px;padding:8px 10px;font-family:ui-monospace,monospace;}
+.sync-pill{position:fixed;top:80px;right:16px;z-index:70;background:#D1FAE5;color:#065F46;font-size:11.5px;font-weight:700;padding:6px 12px;border-radius:99px;display:flex;align-items:center;gap:6px;box-shadow:var(--shadow-sm);opacity:0;transform:translateY(-8px);transition:all .3s var(--ease);pointer-events:none;}
+.sync-pill.show{opacity:1;transform:translateY(0);}
+.sync-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:#10B981;animation:pulse 1.8s infinite;}
+.firebase-warn{position:fixed;top:0;left:0;right:0;background:#DC2626;color:#fff;padding:10px 16px;text-align:center;font-size:13px;z-index:300;font-weight:600;}
 </style>
 </head>
 <body>
 
-<!-- ANNOUNCEMENT -->
 <div class="announce" id="announceBar">
   <span>Free shipping on orders over Rs. 20,000</span>
   <span>2-Year International Warranty</span>
   <span>Easy 14-day returns</span>
 </div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="wrap header-inner">
     <a href="#" class="brand" data-nav="home">
@@ -686,7 +576,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 </header>
 
 <main>
-  <!-- HOME VIEW -->
   <div class="view active" id="view-home">
     <section class="hero">
       <div class="wrap">
@@ -787,7 +676,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
     </section>
   </div>
 
-  <!-- CATALOG VIEW -->
   <div class="view" id="view-catalog">
     <div class="wrap">
       <nav class="crumbs">
@@ -823,7 +711,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
     </div>
   </div>
 
-  <!-- PRODUCT DETAIL VIEW -->
   <div class="view" id="view-product">
     <div class="wrap">
       <nav class="crumbs">
@@ -1041,7 +928,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 
 <div class="overlay" id="overlay"></div>
 
-<!-- CART DRAWER -->
 <aside class="drawer" id="cartDrawer">
   <div class="drawer-head">
     <h3>Your Cart <span id="cartCount" style="color:var(--muted);font-size:14px;font-weight:500;">(0)</span></h3>
@@ -1064,7 +950,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   </div>
 </aside>
 
-<!-- CHECKOUT MODAL -->
 <div class="modal" id="checkoutModal">
   <div class="modal-card">
     <div class="modal-head">
@@ -1119,7 +1004,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   <span id="toastText">Added to cart</span>
 </div>
 
-<!-- FLOATING WHATSAPP -->
 <a class="float-wa" href="https://wa.me/923148843139?text=Hi%20GenzAura!%20I%20have%20a%20question%20about%20your%20watches." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
   <span class="wa-badge">1</span>
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -1128,12 +1012,10 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   </svg>
 </a>
 
-<!-- ADMIN FLOATING BUTTON -->
 <button class="admin-float" id="adminFloatBtn" aria-label="Admin Access">
   <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
 </button>
 
-<!-- ADMIN LOGIN MODAL -->
 <div class="admin-login-modal" id="adminLoginModal">
   <div class="admin-login-card">
     <div class="admin-login-logo">
@@ -1151,8 +1033,8 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
 
     <form id="adminLoginForm">
       <div class="admin-field">
-        <label for="adminUser">Username</label>
-        <input type="text" id="adminUser" autocomplete="username" required>
+        <label for="adminUser">Email</label>
+        <input type="email" id="adminUser" autocomplete="username" required>
       </div>
       <div class="admin-field">
         <label for="adminPass">Password</label>
@@ -1165,7 +1047,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   </div>
 </div>
 
-<!-- ADMIN PANEL -->
 <div class="admin-panel" id="adminPanel">
   <div class="admin-shell">
     <aside class="admin-side">
@@ -1210,7 +1091,7 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
         <div class="admin-tab-head">
           <div>
             <h2>Branding</h2>
-            <p>Change the site name, tagline, and announcement bar.</p>
+            <p>Change the site name, tagline, and announcement bar. Changes sync to all visitors instantly.</p>
           </div>
         </div>
         <div class="admin-grid">
@@ -1299,7 +1180,6 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   </div>
 </div>
 
-<!-- PRODUCT EDIT MODAL -->
 <div class="prod-edit-modal" id="prodEditModal">
   <div class="prod-edit-card">
     <h3 id="prodEditTitle">Edit Product</h3>
@@ -1368,6 +1248,8 @@ h1.product-title{font-family:'Inter',sans-serif;font-size:clamp(26px,3.4vw,36px)
   <span id="adminToastText">Saved</span>
 </div>
 
+<div class="sync-pill" id="syncPill">Live · synced</div>
+
 <script>
 window.EMAILJS_CONFIG = {
   publicKey:  'YOUR_PUBLIC_KEY_HERE',
@@ -1376,6 +1258,33 @@ window.EMAILJS_CONFIG = {
   ownerEmail: 'abdullahkhalid944@yahoo.com',
   whatsapp:   '923148843139'
 };
+</script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, doc, onSnapshot, setDoc, getDoc }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut }
+  from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+const FIREBASE_CONFIG = {
+  apiKey:            "AIzaSyDXonOIbPZiO1GmWVMZ4lmBOfyOecWeWMo",
+  authDomain:        "genzaura-785a4.firebaseapp.com",
+  projectId:         "genzaura-785a4",
+  storageBucket:     "genzaura-785a4.firebasestorage.app",
+  messagingSenderId: "199307232514",
+  appId:             "1:199307232514:web:9917c9336a66a6db512e1b",
+  measurementId:     "G-GWZ40L1M2Z"
+};
+
+const ADMIN_UID = "agNst2XJSfUfXImpvjYbC72U8O82";
+
+const app  = initializeApp(FIREBASE_CONFIG);
+const db   = getFirestore(app);
+const auth = getAuth(app);
+
+window.__firebase = { db, auth, ADMIN_UID, doc, setDoc, getDoc, onSnapshot, signInWithEmailAndPassword, signOut, onAuthStateChanged };
+window.dispatchEvent(new CustomEvent('firebase-ready'));
 </script>
 
 <script>
@@ -1402,11 +1311,17 @@ function showAdminToast(msg){
   clearTimeout(t._t);
   t._t = setTimeout(function(){ t.classList.remove('show'); }, 2200);
 }
+function showSyncPill(text){
+  var p = $('#syncPill'); if (!p) return;
+  p.textContent = text || 'Live · synced';
+  p.classList.add('show');
+  clearTimeout(p._t);
+  p._t = setTimeout(function(){ p.classList.remove('show'); }, 1800);
+}
 function starsHTML(r){
   return '<span class="stars" style="--r:'+r+'"><span>★★★★★</span><span class="fill">★★★★★</span></span>';
 }
 
-/* Working watch image URLs */
 var IMG = {
   w1:'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=900&q=80&auto=format&fit=crop',
   w2:'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=900&q=80&auto=format&fit=crop',
@@ -1432,9 +1347,7 @@ var IMG = {
   a6:'https://images.unsplash.com/photo-1590736969955-71cc94901144?w=900&q=80&auto=format&fit=crop'
 };
 
-/* DEFAULT PRODUCTS — 48 watches */
 var DEFAULT_PRODUCTS = [
-  /* WOMEN */
   {id:'w-01',name:'Rosé Petite Diamond Watch',category:'women',price:44900,compare:58000,rating:4.9,reviews:1248,colors:['Rose Gold','Silver','Gold'],badge:'23% OFF',badgeClass:'',c1:'#FBE9E1',c2:'#E8B4A0',isNew:false,bestSeller:true,stock:7,sub:'Rose gold-tone · 32mm · Sapphire crystal · Diamond hour markers',image:IMG.w1,image2:IMG.w2,image3:IMG.w3,image4:IMG.w4},
   {id:'w-02',name:'Pearl Dial Elegance',category:'women',price:38500,compare:49900,rating:4.8,reviews:876,colors:['Silver','Rose Gold'],badge:'New',badgeClass:'new',c1:'#F1F5F9',c2:'#CBD5E1',isNew:true,bestSeller:true,stock:12,sub:'Mother-of-pearl dial · 34mm · Swiss quartz',image:IMG.w2,image2:IMG.w5,image3:IMG.w6,image4:IMG.w7},
   {id:'w-03',name:'Minimalist Slim 36',category:'women',price:29900,compare:38900,rating:4.7,reviews:654,colors:['Silver','Black','Rose Gold'],badge:'23% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#94A3B8',isNew:false,bestSeller:true,stock:5,sub:'Ultra-slim 6.8mm case · 36mm · Leather strap',image:IMG.w3,image2:IMG.w1,image3:IMG.w8,image4:IMG.w6},
@@ -1447,8 +1360,6 @@ var DEFAULT_PRODUCTS = [
   {id:'w-10',name:'Diamond Bezel Gold',category:'women',price:69900,compare:89900,rating:4.9,reviews:234,colors:['Gold','Rose Gold'],badge:'22% OFF',badgeClass:'',c1:'#FEF3C7',c2:'#F59E0B',isNew:false,bestSeller:false,stock:3,sub:'Diamond-set bezel · 32mm · 18k gold plated',image:IMG.w2,image2:IMG.w5,image3:IMG.w1,image4:IMG.w8},
   {id:'w-11',name:'Emerald Dial Luxe',category:'women',price:58900,compare:72900,rating:4.8,reviews:367,colors:['Gold','Silver'],badge:'New',badgeClass:'new',c1:'#D1FAE5',c2:'#10B981',isNew:true,bestSeller:false,stock:7,sub:'Emerald green dial · 36mm · Gold accents',image:IMG.w3,image2:IMG.w6,image3:IMG.w4,image4:IMG.w7},
   {id:'w-12',name:'Slim Leather Vintage',category:'women',price:24900,compare:32900,rating:4.6,reviews:189,colors:['Rose Gold','Silver'],badge:'24% OFF',badgeClass:'',c1:'#FBE9E1',c2:'#C4836A',isNew:false,bestSeller:false,stock:15,sub:'Vintage brown leather · 34mm · Slim case',image:IMG.w4,image2:IMG.w8,image3:IMG.w1,image4:IMG.w5},
-
-  /* MEN */
   {id:'m-01',name:'Chronograph Steel Pro',category:'men',price:52900,compare:68900,rating:4.8,reviews:543,colors:['Silver','Black','Blue'],badge:'23% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#94A3B8',isNew:false,bestSeller:true,stock:10,sub:'Stainless steel · 42mm · 3-dial chronograph',image:IMG.m1,image2:IMG.m2,image3:IMG.m4,image4:IMG.m6},
   {id:'m-02',name:'Skeleton Automatic Luxe',category:'men',price:74900,compare:94900,rating:4.9,reviews:287,colors:['Silver','Gold'],badge:'21% OFF',badgeClass:'',c1:'#F1F5F9',c2:'#64748B',isNew:false,bestSeller:true,stock:5,sub:'Skeleton dial · Automatic movement · 41mm',image:IMG.m2,image2:IMG.m5,image3:IMG.m3,image4:IMG.m7},
   {id:'m-03',name:'Gold Dress Executive',category:'men',price:64900,compare:82900,rating:4.7,reviews:412,colors:['Gold','Rose Gold'],badge:'22% OFF',badgeClass:'',c1:'#FEF3C7',c2:'#B45309',isNew:true,bestSeller:false,stock:13,sub:'18k gold plated · 40mm · Brown leather',image:IMG.m3,image2:IMG.m8,image3:IMG.m6,image4:IMG.m1},
@@ -1461,8 +1372,6 @@ var DEFAULT_PRODUCTS = [
   {id:'m-10',name:'Carbon Fiber Sport',category:'men',price:61900,compare:78900,rating:4.7,reviews:267,colors:['Black','Silver'],badge:'22% OFF',badgeClass:'',c1:'#1E293B',c2:'#0F172A',isNew:false,bestSeller:true,stock:5,sub:'Carbon fiber case · 43mm · Sport',image:IMG.m2,image2:IMG.m4,image3:IMG.m6,image4:IMG.m8},
   {id:'m-11',name:'Two-Tone Executive',category:'men',price:67900,compare:84900,rating:4.8,reviews:145,colors:['Gold','Silver'],badge:'New',badgeClass:'new',c1:'#FEF3C7',c2:'#B45309',isNew:true,bestSeller:false,stock:10,sub:'Two-tone steel & gold · 41mm',image:IMG.m3,image2:IMG.m1,image3:IMG.m5,image4:IMG.m7},
   {id:'m-12',name:'Green Dial Automatic',category:'men',price:62900,compare:79900,rating:4.8,reviews:198,colors:['Green','Silver'],badge:'21% OFF',badgeClass:'',c1:'#D1FAE5',c2:'#047857',isNew:false,bestSeller:false,stock:12,sub:'Emerald green dial · 42mm · Automatic',image:IMG.m4,image2:IMG.m8,image3:IMG.m2,image4:IMG.m6},
-
-  /* ACCESSORIES */
   {id:'a-01',name:'Alligator Leather Strap',category:'accessories',price:8900,compare:12900,rating:4.7,reviews:321,colors:['Brown','Black'],badge:'31% OFF',badgeClass:'',c1:'#FBE9E1',c2:'#92400E',isNew:false,bestSeller:true,stock:20,sub:'Genuine alligator · 20mm · Quick release',image:IMG.a1,image2:IMG.a2,image3:IMG.a3,image4:IMG.a4},
   {id:'a-02',name:'Milanese Mesh Band',category:'accessories',price:6900,compare:9900,rating:4.6,reviews:245,colors:['Silver','Rose Gold'],badge:'30% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#94A3B8',isNew:true,bestSeller:false,stock:18,sub:'Stainless steel mesh · 20mm · Magnetic clasp',image:IMG.a2,image2:IMG.a5,image3:IMG.a6,image4:IMG.a1},
   {id:'a-03',name:'Watch Display Box',category:'accessories',price:14900,compare:19900,rating:4.8,reviews:178,colors:['Brown','Black'],badge:'New',badgeClass:'new',c1:'#FBE9E1',c2:'#92400E',isNew:true,bestSeller:false,stock:16,sub:'Faux leather · 6-watch display · Velvet interior',image:IMG.a3,image2:IMG.a4,image3:IMG.a6,image4:IMG.a1},
@@ -1475,8 +1384,6 @@ var DEFAULT_PRODUCTS = [
   {id:'a-10',name:'Watch Cleaning Kit',category:'accessories',price:2400,compare:3900,rating:4.4,reviews:76,colors:['Silver'],badge:'New',badgeClass:'new',c1:'#F1F5F9',c2:'#94A3B8',isNew:true,bestSeller:false,stock:38,sub:'Microfiber cloth · Cleaning solution · Brush',image:IMG.a6,image2:IMG.a5,image3:IMG.a3,image4:IMG.a2},
   {id:'a-11',name:'Rubber Dive Strap',category:'accessories',price:5900,compare:8900,rating:4.6,reviews:98,colors:['Black','Blue'],badge:'34% OFF',badgeClass:'',c1:'#1E293B',c2:'#334155',isNew:false,bestSeller:false,stock:22,sub:'FKM rubber · 22mm · Dive-ready',image:IMG.a4,image2:IMG.a1,image3:IMG.a3,image4:IMG.a6},
   {id:'a-12',name:'Steel Bracelet Oyster',category:'accessories',price:7900,compare:11900,rating:4.7,reviews:67,colors:['Silver','Gold'],badge:'34% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#94A3B8',isNew:false,bestSeller:false,stock:19,sub:'316L steel · 20mm · Fold-over clasp',image:IMG.a1,image2:IMG.a2,image3:IMG.a5,image4:IMG.a4},
-
-  /* SALE */
   {id:'s-01',name:'Rose Gold Classic (Sale)',category:'sale',price:32900,compare:49900,rating:4.6,reviews:432,colors:['Rose Gold','Silver'],badge:'34% OFF',badgeClass:'',c1:'#FBE9E1',c2:'#E8B4A0',isNew:false,bestSeller:true,stock:8,sub:'Limited run · 34mm · Sapphire crystal',image:IMG.w1,image2:IMG.w3,image3:IMG.w5,image4:IMG.w7},
   {id:'s-02',name:'Steel Chronograph (Sale)',category:'sale',price:38900,compare:58900,rating:4.5,reviews:287,colors:['Silver','Black'],badge:'34% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#94A3B8',isNew:false,bestSeller:false,stock:14,sub:'3-dial chrono · 42mm',image:IMG.m1,image2:IMG.m3,image3:IMG.m5,image4:IMG.m7},
   {id:'s-03',name:'Brown Leather Classic (Sale)',category:'sale',price:25900,compare:42900,rating:4.4,reviews:156,colors:['Rose Gold','Silver'],badge:'40% OFF',badgeClass:'',c1:'#FBE9E1',c2:'#92400E',isNew:false,bestSeller:false,stock:12,sub:'Vintage leather · 40mm',image:IMG.w4,image2:IMG.w6,image3:IMG.w2,image4:IMG.w8},
@@ -1490,8 +1397,6 @@ var DEFAULT_PRODUCTS = [
   {id:'s-11',name:'Blue Dial Diver (Sale)',category:'sale',price:43900,compare:71900,rating:4.6,reviews:178,colors:['Blue','Silver'],badge:'39% OFF',badgeClass:'',c1:'#DBEAFE',c2:'#2563EB',isNew:false,bestSeller:false,stock:9,sub:'Sunburst blue · Automatic',image:IMG.m7,image2:IMG.m1,image3:IMG.m5,image4:IMG.m3},
   {id:'s-12',name:'Titanium Chrono (Sale)',category:'sale',price:69900,compare:109900,rating:4.7,reviews:89,colors:['Silver','Black'],badge:'36% OFF',badgeClass:'',c1:'#E2E8F0',c2:'#64748B',isNew:false,bestSeller:false,stock:13,sub:'Titanium · Racing chrono',image:IMG.m1,image2:IMG.m7,image3:IMG.m3,image4:IMG.m5}
 ];
-
-/* Ensure every product has 4 image slots */
 DEFAULT_PRODUCTS.forEach(function(p){
   p.image2 = p.image2 || p.image;
   p.image3 = p.image3 || p.image;
@@ -1526,27 +1431,50 @@ var state = {
 };
 try { state.wishlist = JSON.parse(localStorage.getItem('genzaura_wishlist') || '[]'); } catch(e){ state.wishlist = []; }
 
-var ADMIN_KEY = 'genzaura_admin_settings';
-var ADMIN_CREDS = { username: 'admin22', password: 'admin123' };
+var siteSettings = null;
+var fb = null;
+var fbReady = false;
 var adminSession = false;
-
-function loadAdminSettings(){
-  try {
-    var raw = localStorage.getItem(ADMIN_KEY);
-    if (!raw) return null;
-    return JSON.parse(raw);
-  } catch(e){ return null; }
-}
-function saveAdminSettings(settings){
-  try { localStorage.setItem(ADMIN_KEY, JSON.stringify(settings)); } catch(e){}
-}
-
+var ADMIN_UID = null;
 var PRODUCTS = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
 
-function applyAdminSettings(){
-  var settings = loadAdminSettings();
-  if (!settings) return;
+window.addEventListener('firebase-ready', initFirebase);
+if (window.__firebase) initFirebase();
 
+function initFirebase(){
+  if (fbReady) return;
+  fb = window.__firebase;
+  if (!fb) return;
+  fbReady = true;
+  ADMIN_UID = fb.ADMIN_UID;
+
+  fb.onSnapshot(fb.doc(fb.db, 'site', 'content'), function(snap){
+    siteSettings = snap.exists() ? (snap.data() || {}) : {};
+    applySiteSettings(siteSettings);
+    showSyncPill('Live · synced');
+  }, function(err){
+    console.error('Firestore listen failed:', err);
+  });
+
+  fb.onAuthStateChanged(fb.auth, function(user){
+    adminSession = !!user && user.uid === ADMIN_UID;
+  });
+}
+
+function saveSection(sectionName, data){
+  if (!fb){ showAdminToast('Firebase not ready'); return; }
+  var payload = {};
+  payload[sectionName] = data;
+  fb.setDoc(fb.doc(fb.db, 'site', 'content'), payload, { merge: true })
+    .then(function(){ showSyncPill('Saved · live'); })
+    .catch(function(err){
+      console.error('Save failed:', err);
+      showAdminToast('Save failed: ' + (err.code || err.message));
+    });
+}
+
+function applySiteSettings(settings){
+  if (!settings) return;
   if (settings.brand){
     if (settings.brand.name){
       var bn = $('#brandName'); if (bn) bn.textContent = settings.brand.name;
@@ -1565,27 +1493,25 @@ function applyAdminSettings(){
       }
     }
   }
-
   if (settings.theme && settings.theme.accent){
     document.documentElement.style.setProperty('--accent', settings.theme.accent);
     document.documentElement.style.setProperty('--accent-dark', shade(settings.theme.accent, -25));
     document.documentElement.style.setProperty('--accent-light', shade(settings.theme.accent, 80));
     document.documentElement.style.setProperty('--shadow-blue', '0 8px 24px ' + hexA(settings.theme.accent, .32));
   }
-
   if (settings.hero){
     if (settings.hero.eyebrow){ var he = $('#heroEyebrow'); if (he) he.textContent = settings.hero.eyebrow; }
     if (settings.hero.title){ var ht = $('#heroTitle'); if (ht) ht.innerHTML = settings.hero.title; }
     if (settings.hero.sub){ var hs = $('#heroSub'); if (hs) hs.textContent = settings.hero.sub; }
   }
-
   if (settings.products && Array.isArray(settings.products)){
+    PRODUCTS = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
     settings.products.forEach(function(override){
       for (var i = 0; i < PRODUCTS.length; i++){
         if (PRODUCTS[i].id === override.id){
-          if (override.name) PRODUCTS[i].name = override.name;
-          if (override.sub) PRODUCTS[i].sub = override.sub;
-          if (override.price) PRODUCTS[i].price = override.price;
+          if (override.name)   PRODUCTS[i].name   = override.name;
+          if (override.sub)    PRODUCTS[i].sub    = override.sub;
+          if (override.price)  PRODUCTS[i].price  = override.price;
           if (override.compare) PRODUCTS[i].compare = override.compare;
           if (override.image)  PRODUCTS[i].image  = override.image;
           if (override.image2) PRODUCTS[i].image2 = override.image2;
@@ -1595,6 +1521,14 @@ function applyAdminSettings(){
         }
       }
     });
+    renderHome();
+    renderCatalog();
+    if (state.view === 'product' && state.currentProduct){
+      var cur = null;
+      for (var q = 0; q < PRODUCTS.length; q++) if (PRODUCTS[q].id === state.currentProduct.id) cur = PRODUCTS[q];
+      if (cur) openProduct(cur);
+    }
+    renderAdminProducts();
   }
 }
 
@@ -1713,13 +1647,11 @@ function switchView(view, opts){
   state.view = view;
   if (view !== 'product'){ var sa = $('#stickyAtc'); if (sa) sa.classList.remove('show'); }
   window.scrollTo({top:0, behavior:'smooth'});
-
   $$('#mainNav a').forEach(function(a){
     var isActive = (view === 'home' && a.getAttribute('data-nav') === 'home') ||
                    (view === 'catalog' && a.getAttribute('data-cat') === state.category);
     a.classList.toggle('active', isActive);
   });
-
   if (view === 'catalog'){
     if (opts.category) state.category = opts.category;
     renderCatalog();
@@ -1732,7 +1664,6 @@ function switchView(view, opts){
     var s = $('#catalogSubtitle'); if (s) s.textContent = subs[state.category] || subs.all;
     var c = $('#catalogCrumb'); if (c) c.textContent = labels[state.category] || 'All Watches';
   }
-
   if (view === 'product' && opts.product) openProduct(opts.product);
 }
 
@@ -1741,7 +1672,6 @@ function openProduct(p){
   state.selectedSize = null;
   state.selectedColor = p.colors[0] || 'Silver';
   state.qty = 1;
-
   $('#pTitle').textContent = p.name;
   $('#pSub').textContent = p.sub;
   $('#pPrice').textContent = money(p.price);
@@ -1759,10 +1689,7 @@ function openProduct(p){
   $('#pSizeName').textContent = 'Select';
   $('#sizeError').classList.remove('show');
   $('#qtyInput').value = 1;
-
   $$('#sizes .size').forEach(function(sz){ sz.classList.remove('active'); });
-
-  /* 4-image gallery */
   var galleryImgs = [p.image, p.image2 || p.image, p.image3 || p.image, p.image4 || p.image];
   $$('#stage .slide').forEach(function(sl, i){
     var src = galleryImgs[i] || p.image;
@@ -1776,7 +1703,6 @@ function openProduct(p){
   });
   var st = $('#stickyThumb');
   if (st) st.innerHTML = '<img src="'+p.image+'" alt="'+esc(p.name)+'" onerror="this.style.display=\'none\'">';
-
   var sw = $('#swatches');
   if (sw){
     sw.innerHTML = p.colors.map(function(c){
@@ -1808,12 +1734,9 @@ function addToCart(silent){
   }
   var key = cartKey(state.currentProduct);
   var existing = null;
-  for (var i = 0; i < state.cart.length; i++){
-    if (state.cart[i].key === key){ existing = state.cart[i]; break; }
-  }
-  if (existing){
-    existing.qty = Math.min(10, existing.qty + state.qty);
-  } else {
+  for (var i = 0; i < state.cart.length; i++){ if (state.cart[i].key === key){ existing = state.cart[i]; break; } }
+  if (existing){ existing.qty = Math.min(10, existing.qty + state.qty); }
+  else {
     state.cart.push({
       key: key, id: state.currentProduct.id, name: state.currentProduct.name,
       size: state.selectedSize, color: state.selectedColor,
@@ -1831,13 +1754,9 @@ function renderCart(){
   var foot = $('#cartFoot');
   var badge = $('#cartBadge');
   var count = 0, subtotal = 0;
-  for (var i = 0; i < state.cart.length; i++){
-    count += state.cart[i].qty;
-    subtotal += state.cart[i].price * state.cart[i].qty;
-  }
+  for (var i = 0; i < state.cart.length; i++){ count += state.cart[i].qty; subtotal += state.cart[i].price * state.cart[i].qty; }
   if (badge){ badge.textContent = count; badge.classList.toggle('show', count > 0); }
   $('#cartCount').textContent = '(' + count + ')';
-
   if (state.cart.length === 0){
     body.innerHTML = '<div class="cart-empty">' +
       '<svg viewBox="0 0 24 24"><path d="M6 2l-2 6v12a2 2 0 002 2h12a2 2 0 002-2V8l-2-6z"/><path d="M4 8h16"/><path d="M16 12a4 4 0 01-8 0"/></svg>' +
@@ -1849,7 +1768,6 @@ function renderCart(){
     updateShipBar(0);
     return;
   }
-
   foot.style.display = 'block';
   body.innerHTML = state.cart.map(function(item, idx){
     return '<div class="cart-item">' +
@@ -1871,7 +1789,6 @@ function renderCart(){
       '</div>' +
     '</div>';
   }).join('');
-
   var freeShip = subtotal >= 20000;
   var shipping = freeShip ? 0 : 299;
   $('#subtotal').textContent = money(subtotal);
@@ -1894,31 +1811,14 @@ function updateShipBar(subtotal){
 }
 
 function bumpBadge(){
-  var b = $('#cartBadge');
-  if (!b) return;
-  b.classList.remove('pop');
-  void b.offsetWidth;
-  b.classList.add('pop');
+  var b = $('#cartBadge'); if (!b) return;
+  b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
 }
 
-function openCart(){
-  $('#cartDrawer').classList.add('show');
-  $('#overlay').classList.add('show');
-  document.body.classList.add('no-scroll');
-}
-function closeCart(){
-  $('#cartDrawer').classList.remove('show');
-  $('#overlay').classList.remove('show');
-  document.body.classList.remove('no-scroll');
-}
-function openModal(){
-  $('#checkoutModal').classList.add('show');
-  document.body.classList.add('no-scroll');
-}
-function closeModal(){
-  $('#checkoutModal').classList.remove('show');
-  document.body.classList.remove('no-scroll');
-}
+function openCart(){ $('#cartDrawer').classList.add('show'); $('#overlay').classList.add('show'); document.body.classList.add('no-scroll'); }
+function closeCart(){ $('#cartDrawer').classList.remove('show'); $('#overlay').classList.remove('show'); document.body.classList.remove('no-scroll'); }
+function openModal(){ $('#checkoutModal').classList.add('show'); document.body.classList.add('no-scroll'); }
+function closeModal(){ $('#checkoutModal').classList.remove('show'); document.body.classList.remove('no-scroll'); }
 
 function toggleWishlist(id){
   var idx = state.wishlist.indexOf(id);
@@ -1926,13 +1826,10 @@ function toggleWishlist(id){
   else { state.wishlist.push(id); showToast('Added to wishlist ♥'); }
   try { localStorage.setItem('genzaura_wishlist', JSON.stringify(state.wishlist)); } catch(e){}
   updateWishlistBadge();
-  $$('[data-wish="'+id+'"]').forEach(function(btn){
-    btn.classList.toggle('active', state.wishlist.indexOf(id) >= 0);
-  });
+  $$('[data-wish="'+id+'"]').forEach(function(btn){ btn.classList.toggle('active', state.wishlist.indexOf(id) >= 0); });
 }
 function updateWishlistBadge(){
-  var b = $('#wishlistBadge');
-  if (!b) return;
+  var b = $('#wishlistBadge'); if (!b) return;
   b.textContent = state.wishlist.length;
   b.classList.toggle('show', state.wishlist.length > 0);
 }
@@ -2000,7 +1897,6 @@ function loadEmailJS(cb){
 
 document.addEventListener('click', function(e){
   var t = e.target;
-
   if (t.closest && (t.closest('#adminPanel') || t.closest('#adminLoginModal') || t.closest('#prodEditModal') || t.closest('#adminFloatBtn'))) return;
 
   var wishBtn = t.closest && t.closest('[data-wish]');
@@ -2099,9 +1995,7 @@ bind('checkoutBtn', 'click', function(){
   $('#modalTitle').textContent = 'Checkout';
   openModal();
 });
-bind('continueShopping', 'click', function(){
-  closeModal(); switchView('home'); showToast('Thank you for your order!');
-});
+bind('continueShopping', 'click', function(){ closeModal(); switchView('home'); showToast('Thank you for your order!'); });
 bind('searchToggle', 'click', function(){
   var bar = $('#searchBar');
   bar.classList.toggle('show');
@@ -2273,8 +2167,8 @@ if (orderForm) orderForm.addEventListener('submit', function(e){
   var send = function(){
     if (!window.emailjs || window.EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY_HERE'){ finish(); return; }
     window.emailjs.send(window.EMAILJS_CONFIG.serviceId, window.EMAILJS_CONFIG.templateId, params)
-      .then(function(){ console.log('✅ Order email sent'); finish(); })
-      .catch(function(err){ console.error('❌ Email failed:', err); finish(); });
+      .then(function(){ finish(); })
+      .catch(function(err){ console.error('Email failed:', err); finish(); });
   };
   loadEmailJS(send);
 });
@@ -2289,10 +2183,6 @@ document.addEventListener('keydown', function(e){
     document.body.classList.remove('no-scroll');
   }
 });
-
-/* ═══════════════════════════════════════════════════════
-   ADMIN SYSTEM
-   ═══════════════════════════════════════════════════════ */
 
 bind('adminFloatBtn', 'click', function(){
   if (adminSession){
@@ -2319,21 +2209,30 @@ var adminLoginForm = $('#adminLoginForm');
 if (adminLoginForm){
   adminLoginForm.addEventListener('submit', function(e){
     e.preventDefault();
-    var u = $('#adminUser').value.trim();
-    var p = $('#adminPass').value;
-    if (u === ADMIN_CREDS.username && p === ADMIN_CREDS.password){
-      adminSession = true;
-      $('#adminLoginModal').classList.remove('show');
-      $('#adminPanel').classList.add('show');
-      fillAdminFields();
-      renderAdminProducts();
-      showAdminToast('Welcome, ' + u);
-    } else {
-      $('#adminErrMsg').textContent = 'Invalid username or password';
-      $('#adminErr').classList.add('show');
-      $('#adminPass').value = '';
-      $('#adminPass').focus();
-    }
+    var email = $('#adminUser').value.trim();
+    var pw    = $('#adminPass').value;
+    if (!fb){ $('#adminErrMsg').textContent = 'Firebase not ready — check config'; $('#adminErr').classList.add('show'); return; }
+    var btn = adminLoginForm.querySelector('button[type="submit"]');
+    btn.disabled = true; btn.textContent = 'Signing in...';
+    fb.signInWithEmailAndPassword(fb.auth, email, pw)
+      .then(function(cred){
+        if (cred.user.uid !== ADMIN_UID){
+          return fb.signOut(fb.auth).then(function(){ throw new Error('This account is not the admin.'); });
+        }
+        adminSession = true;
+        $('#adminLoginModal').classList.remove('show');
+        $('#adminPanel').classList.add('show');
+        fillAdminFields();
+        renderAdminProducts();
+        showAdminToast('Welcome, admin');
+      })
+      .catch(function(err){
+        $('#adminErrMsg').textContent = err.message.replace('Firebase: ', '').replace('Error: ', '');
+        $('#adminErr').classList.add('show');
+        $('#adminPass').value = '';
+        $('#adminPass').focus();
+      })
+      .finally(function(){ btn.disabled = false; btn.textContent = 'Sign In'; });
   });
 }
 
@@ -2343,6 +2242,7 @@ bind('adminPanelClose', 'click', function(){
 });
 
 bind('adminLogoutBtn', 'click', function(){
+  if (fb) fb.signOut(fb.auth);
   adminSession = false;
   $('#adminPanel').classList.remove('show');
   document.body.classList.remove('no-scroll');
@@ -2358,23 +2258,20 @@ $$('.admin-nav-item[data-admin-tab]').forEach(function(btn){
 });
 
 function fillAdminFields(){
-  var settings = loadAdminSettings() || {};
+  var settings = siteSettings || {};
   var brand = settings.brand || {};
   var theme = settings.theme || {};
-  var hero = settings.hero || {};
-
+  var hero  = settings.hero  || {};
   $('#cfgBrandName').value = brand.name || ($('#brandName') ? $('#brandName').textContent : 'GENZAURA');
   $('#cfgBrandTagline').value = brand.tagline || ($('#brandTagline') ? $('#brandTagline').textContent : 'LUXURY WATCHES');
   var announceLines = brand.announce || Array.from($$('#announceBar span')).map(function(s){ return s.textContent; }).join('\n');
   $('#cfgAnnounce').value = announceLines;
-
   var accent = theme.accent || getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2563EB';
   $('#cfgAccentColor').value = accent;
   $('#cfgAccentHex').value = accent;
   $$('.color-pick').forEach(function(cp){
     cp.classList.toggle('active', cp.getAttribute('data-color').toLowerCase() === accent.toLowerCase());
   });
-
   $('#cfgHeroEyebrow').value = hero.eyebrow || ($('#heroEyebrow') ? $('#heroEyebrow').textContent : '');
   $('#cfgHeroTitle').value = hero.title || ($('#heroTitle') ? $('#heroTitle').innerHTML : '');
   $('#cfgHeroSub').value = hero.sub || ($('#heroSub') ? $('#heroSub').textContent : '');
@@ -2386,9 +2283,7 @@ $$('.color-pick').forEach(function(cp){
     $$('.color-pick').forEach(function(x){ x.classList.toggle('active', x === cp); });
     $('#cfgAccentColor').value = c;
     $('#cfgAccentHex').value = c;
-    document.documentElement.style.setProperty('--accent', c);
-    document.documentElement.style.setProperty('--accent-dark', shade(c, -25));
-    document.documentElement.style.setProperty('--accent-light', shade(c, 80));
+    saveSection('theme', { accent: c });
   });
 });
 
@@ -2401,14 +2296,14 @@ if (colorInput) colorInput.addEventListener('input', function(){
   document.documentElement.style.setProperty('--accent-dark', shade(c, -25));
   document.documentElement.style.setProperty('--accent-light', shade(c, 80));
 });
+if (colorInput) colorInput.addEventListener('change', function(){ saveSection('theme', { accent: colorInput.value }); });
+
 var hexInput = $('#cfgAccentHex');
 if (hexInput) hexInput.addEventListener('change', function(){
   var c = hexInput.value;
   if (!/^#[0-9A-Fa-f]{6}$/.test(c)) return;
   $('#cfgAccentColor').value = c;
-  document.documentElement.style.setProperty('--accent', c);
-  document.documentElement.style.setProperty('--accent-dark', shade(c, -25));
-  document.documentElement.style.setProperty('--accent-light', shade(c, 80));
+  saveSection('theme', { accent: c });
 });
 
 function renderAdminProducts(){
@@ -2426,12 +2321,8 @@ function renderAdminProducts(){
       '</div>' +
     '</div>';
   }).join('');
-
   $$('[data-edit-prod]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var pid = btn.getAttribute('data-edit-prod');
-      openProdEditor(pid);
-    });
+    btn.addEventListener('click', function(){ openProdEditor(btn.getAttribute('data-edit-prod')); });
   });
 }
 
@@ -2447,7 +2338,6 @@ function openProdEditor(pid){
   $('#editProdDesc').value = p.sub;
   $('#editProdPrice').value = p.price;
   $('#editProdCompare').value = p.compare;
-
   var imgs = [p.image, p.image2 || p.image, p.image3 || p.image, p.image4 || p.image];
   for (var k = 1; k <= 4; k++){
     var input = $('#editProdImage' + k);
@@ -2458,9 +2348,7 @@ function openProdEditor(pid){
   $('#prodEditModal').classList.add('show');
 }
 
-bind('prodEditCancel', 'click', function(){
-  $('#prodEditModal').classList.remove('show');
-});
+bind('prodEditCancel', 'click', function(){ $('#prodEditModal').classList.remove('show'); });
 
 for (var _k = 1; _k <= 4; _k++){
   (function(k){
@@ -2477,94 +2365,76 @@ bind('prodEditSave', 'click', function(){
   var p = null;
   for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === editingProductId){ p = PRODUCTS[i]; break; }
   if (!p) return;
-
   p.name    = $('#editProdName').value.trim() || p.name;
   p.sub     = $('#editProdDesc').value.trim() || p.sub;
   p.price   = parseFloat($('#editProdPrice').value) || p.price;
   p.compare = parseFloat($('#editProdCompare').value) || p.compare;
-
   var img1 = $('#editProdImage1').value.trim() || p.image;
   var img2 = $('#editProdImage2').value.trim() || img1;
   var img3 = $('#editProdImage3').value.trim() || img1;
   var img4 = $('#editProdImage4').value.trim() || img1;
-
-  p.image  = img1;
-  p.image2 = img2;
-  p.image3 = img3;
-  p.image4 = img4;
-
-  var settings = loadAdminSettings() || {};
-  if (!settings.products) settings.products = [];
+  p.image = img1; p.image2 = img2; p.image3 = img3; p.image4 = img4;
   var payload = {
     id: p.id, name: p.name, sub: p.sub, price: p.price, compare: p.compare,
     image: p.image, image2: p.image2, image3: p.image3, image4: p.image4
   };
+  var currentProducts = (siteSettings && Array.isArray(siteSettings.products)) ? siteSettings.products.slice() : [];
   var found = false;
-  for (var k = 0; k < settings.products.length; k++){
-    if (settings.products[k].id === p.id){ settings.products[k] = payload; found = true; break; }
+  for (var k = 0; k < currentProducts.length; k++){
+    if (currentProducts[k].id === p.id){ currentProducts[k] = payload; found = true; break; }
   }
-  if (!found) settings.products.push(payload);
-  saveAdminSettings(settings);
-
-  renderHome();
-  renderCatalog();
-  renderAdminProducts();
+  if (!found) currentProducts.push(payload);
+  saveSection('products', currentProducts);
   $('#prodEditModal').classList.remove('show');
-  showAdminToast('Product saved · 4 images');
+  showAdminToast('Product saved · synced');
+  renderAdminProducts();
 });
 
 bind('adminResetProductsBtn', 'click', function(){
-  if (!confirm('Reset ALL product edits back to defaults?')) return;
-  var settings = loadAdminSettings() || {};
-  settings.products = [];
-  saveAdminSettings(settings);
-  PRODUCTS = JSON.parse(JSON.stringify(DEFAULT_PRODUCTS));
-  renderHome(); renderCatalog(); renderAdminProducts();
-  showAdminToast('Products reset');
+  if (!confirm('Reset ALL product edits back to defaults? This affects every visitor.')) return;
+  saveSection('products', []);
+  showAdminToast('Products reset · synced');
 });
+
+var brandSaveTimer = null;
+function scheduleBrandSave(){
+  clearTimeout(brandSaveTimer);
+  brandSaveTimer = setTimeout(function(){
+    if (!fb) return;
+    var brand = {
+      name:     $('#cfgBrandName').value,
+      tagline:  $('#cfgBrandTagline').value,
+      announce: $('#cfgAnnounce').value
+    };
+    var hero = {
+      eyebrow: $('#cfgHeroEyebrow').value,
+      title:   $('#cfgHeroTitle').value,
+      sub:     $('#cfgHeroSub').value
+    };
+    fb.setDoc(fb.doc(fb.db, 'site', 'content'), { brand: brand, hero: hero }, { merge: true })
+      .then(function(){ showSyncPill('Saved · live'); })
+      .catch(function(err){ showAdminToast('Save failed: ' + err.message); });
+  }, 500);
+}
 
 ['cfgBrandName','cfgBrandTagline','cfgAnnounce','cfgHeroEyebrow','cfgHeroTitle','cfgHeroSub'].forEach(function(id){
   var el = $('#'+id);
-  if (el) el.addEventListener('input', function(){
-    var settings = loadAdminSettings() || {};
-    if (!settings.brand) settings.brand = {};
-    if (!settings.hero) settings.hero = {};
-    settings.brand.name = $('#cfgBrandName').value;
-    settings.brand.tagline = $('#cfgBrandTagline').value;
-    settings.brand.announce = $('#cfgAnnounce').value;
-    settings.hero.eyebrow = $('#cfgHeroEyebrow').value;
-    settings.hero.title = $('#cfgHeroTitle').value;
-    settings.hero.sub = $('#cfgHeroSub').value;
-    saveAdminSettings(settings);
-    if ($('#brandName')) $('#brandName').textContent = settings.brand.name;
-    if ($('#footerBrandName')) $('#footerBrandName').textContent = settings.brand.name;
-    if ($('#brandTagline')) $('#brandTagline').textContent = settings.brand.tagline;
-    if ($('#footerBrandTagline')) $('#footerBrandTagline').textContent = settings.brand.tagline;
-    if ($('#heroEyebrow')) $('#heroEyebrow').textContent = settings.hero.eyebrow;
-    if ($('#heroTitle')) $('#heroTitle').innerHTML = settings.hero.title;
-    if ($('#heroSub')) $('#heroSub').textContent = settings.hero.sub;
-    if ($('#announceBar')){
-      $('#announceBar').innerHTML = settings.brand.announce.split('\n').filter(Boolean)
-        .map(function(l){ return '<span>'+esc(l)+'</span>'; }).join('');
-    }
-  });
+  if (el) el.addEventListener('input', scheduleBrandSave);
 });
 
-applyAdminSettings();
 renderHome();
 renderCatalog();
 renderCart();
 renderReviews();
 updateWishlistBadge();
-
 $$('.bar-fill').forEach(function(b){ b.style.width = (b.getAttribute('data-pct') || 0) + '%'; });
 
-console.log('✅ GenzAura ready — ' + PRODUCTS.length + ' watches. Admin: admin22 / admin123');
+console.log('✅ GenzAura ready — Firestore-backed admin active.');
 
 } catch(err){
   console.error('App error:', err);
   document.body.insertAdjacentHTML('beforeend',
-    '<div style="position:fixed;bottom:10px;left:10px;background:#EF4444;color:#fff;padding:10px 16px;border-radius:8px;font-size:12px;z-index:9999;">Error: ' + err.message + '</div>');
+    '<div class="firebase-warn">Site error: ' + err.message + '</div>');
 }
 })();
 </script>
